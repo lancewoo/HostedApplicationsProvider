@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    To run this test package, install it and the HostedApplicationsProvider application to a device
+     or emulator and then run:
+    adb shell am instrument -w com.jamdeo.tv.provider.tests/android.test.InstrumentationTestRunner
+-->
+<!--
+    The Android package name differs from the package ID of the code. The code package ID
+    'com.jamdeo.tv.provider' allows the test code to use declarations from the application
+    under test, while the Android package name identifies this as a separate test package.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jamdeo.tv.provider.tests"
+    android:versionCode="1"
+    android:versionName="1.0">
+    <!--
+        The application element indicates that this package must be linked against the library
+        android.test.runner, which is not part of the normal link path. The library contains
+        code for test cases.
+    -->
+    <application>
+        <uses-library android:name="android.test.runner" />
+    </application>
+    <!--
+        The instrumentation element tells Android to use instrumentation to run this package.
+        The target Android package 'com.jamdeo.tv.provider' is loaded along with the
+        test package 'com.jamdeo.tv.provider.tests'. Android then starts the class
+        'android.test.InstrumentationTestRunner', which loads the test case classes in the package.
+    -->
+    <instrumentation android:name="android.test.InstrumentationTestRunner"
+                     android:targetPackage="com.jamdeo.tv.provider"
+                     android:label="Tests for com.jamdeo.tv.provider"/>
+    <uses-sdk android:minSdkVersion="10"></uses-sdk>
+</manifest>

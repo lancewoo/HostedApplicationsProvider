@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HostedApplicationsProvider</string>
+    <string name="perm_hosted_apps_provider_label">Hosted Applications Provider</string>
+    <string name="perm_hosted_apps_provider_desc">Information of hidden applications in some contexts is put here.</string>
+</resources>
